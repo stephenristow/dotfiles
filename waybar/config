@@ -29,8 +29,7 @@
 		    "format-icons": {
 			  "active": "",
 			  "focused": "",
-			  "active": "",
-			  "default": ""
+			  "default": "",
     		},
         "persistent-workspaces": {
       		"Virtual-1": [1, 2, 3, 4, 5]

@@ -7,9 +7,9 @@
 }
 
 #waybar {
-  background: transparent;
-  color: @text;
-  margin: 5px 5px;
+  background: rgba(245, 244, 239, 0.82);
+  color: #2E2E2E;
+  border-bottom: 1px solid rgba(122, 155, 118, 0.35);
 }
 
 #workspaces {
@@ -26,8 +26,9 @@
 }
 
 #workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
+  background: rgba(122, 155, 118, 0.25);
+  color: #2E2E2E;
+  border-radius: 10px;
 }
 
 #workspaces button:hover {
@@ -47,8 +48,9 @@
 #custom-lock,
 #custom-power {
   background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 4px 10px;
+  border-radius: 12px;
 }
 
 #clock {

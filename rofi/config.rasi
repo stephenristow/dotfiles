@@ -20,16 +20,17 @@
   urgent-background:           @background;
   selected-normal-foreground:  @lightbg;
   active-foreground:           @blue;
-  background:                  @base;
+  background:                  rgba(245, 244, 239, 90%);
   selected-active-background:  @blue;
   active-background:           @background;
   selected-normal-background:  @lightfg;
   alternate-normal-background: @lightbg;
-  foreground:                  @text;
+  foreground:                  #2E2E2E;
   selected-urgent-foreground:  @background;
   normal-foreground:           @foreground;
   alternate-urgent-foreground: @red;
   alternate-active-foreground: @blue;
+  accent:                      #7A9B76;
 
 }
 element {

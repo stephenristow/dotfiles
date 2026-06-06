@@ -1,13 +1,17 @@
-general.import = [
-  # uncomment the flavour you want below:
-  #"~/.config/alacritty/catppuccin-latte.toml"
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml"
-]
-
 [window]
-opacity = 0.9
+opacity = 0.8
+
+[colors.primary]
+background = "#F5F4EF"
+foreground = "#2E2E2E"
+
+[colors.cursor]
+text = "#F5F4EF"
+cursor = "#7A9B76"
+
+[colors.selection]
+text = "#2E2E2E"
+background = "#D8E3D2"
 
 [window.padding]
 x = 10
