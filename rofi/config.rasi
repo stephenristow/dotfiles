@@ -1,79 +1,50 @@
-// @import "catppuccin-latte"
-// @import "catppuccin-frappe"
-@import "catppuccin-macchiato"
-// @import "catppuccin-mocha"
-
 * {
-  selected-active-foreground:  @background;
-  lightfg:                     @text;
-  separatorcolor:              @foreground;
-  urgent-foreground:           @red;
-  alternate-urgent-background: @lightbg;
-  lightbg:                     @mantle;
-  background-color:            transparent;
-  border-color:                @foreground;
-  normal-background:           @background;
-  selected-urgent-background:  @red;
-  alternate-active-background: @lightbg;
-  spacing:                     2;
-  alternate-normal-foreground: @foreground;
-  urgent-background:           @background;
-  selected-normal-foreground:  @lightbg;
-  active-foreground:           @blue;
-  background:                  rgba(245, 244, 239, 90%);
-  selected-active-background:  @blue;
-  active-background:           @background;
-  selected-normal-background:  @lightfg;
-  alternate-normal-background: @lightbg;
-  foreground:                  #2E2E2E;
-  selected-urgent-foreground:  @background;
-  normal-foreground:           @foreground;
-  alternate-urgent-foreground: @red;
-  alternate-active-foreground: @blue;
-  accent:                      #7A9B76;
+  paper: #E8E6DE;
+  paper-soft: #F5F4EF;
+  ink: #2E2E2E;
+  muted: #6B7467;
+  sage: #7A9B76;
+  mist: #7EA6C2;
+  rose: #B86F7B;
+  gold: #B89B5E;
 
+  background: transparent;
+  foreground: @ink;
+  selected: rgba(122, 155, 118, 28%);
+
+  font: "JetBrainsMono Nerd Font 11";
+
+  spacing: 8;
 }
+
 element {
-    padding: 1px ;
-    cursor:  pointer;
-    spacing: 5px ;
-    border:  0;
+    padding: 7px 9px ;
+    border-radius: 9px;
+    background-color: transparent;
+    text-color: @ink;
+    spacing: 8px ;
 }
 element normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color: transparent;
+    text-color:       @ink;
 }
 element normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+    text-color:       @rose;
 }
 element normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+    text-color:       @mist;
 }
 element selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @selected;
+    text-color:       @ink;
 }
 element selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+    background-color: rgba(184, 111, 123, 25%);
+    text-color:       @rose;
 }
 element selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-element alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-element alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-element alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+    background-color: rgba(126, 166, 194, 25%);
+    text-color:       @ink;
 }
 element-text {
     background-color: transparent;
@@ -82,35 +53,37 @@ element-text {
     text-color:       inherit;
 }
 element-icon {
+    size:             1.1000em ;
     background-color: transparent;
-    size:             1.0000em ;
-    cursor:           inherit;
-    text-color:       inherit;
 }
 window {
-    padding:          5;
-    background-color: @background;
-    border:           1;
+    width: 42%;
+    padding:          14px;
+    border: 1px;
+    border-color: rgba(122, 155, 118, 45%);
+    border-radius: 14px;
+    background-color: rgba(232, 230, 222, 82%);
 }
 mainbox {
-    padding: 0;
-    border:  0;
+    background-color: transparent;
+    spacing: 10px;
 }
 message {
-    padding:      1px ;
-    border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    padding:      8px ;
+    border-radius: 8px;
+    background-color: rgba(245, 244, 239, 40%);
 }
 textbox {
-    text-color: @foreground;
+    text-color: @ink;
 }
 listview {
-    padding:      2px 0px 0px ;
-    scrollbar:    true;
-    border-color: @separatorcolor;
-    spacing:      2px ;
-    fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    spacing:      6px ;
+    padding:      4px 0px;
+    background-color: transparent;
+    scrollbar:    false;
 }
 scrollbar {
     width:        4px ;
@@ -146,29 +119,27 @@ textbox-num-sep {
     text-color: Gray;
 }
 inputbar {
-    padding:    1px ;
-    spacing:    0px ;
-    text-color: @normal-foreground;
-    children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: rgba(245, 244, 239, 45%);
+    text-color: @ink;
+    children:   [ "prompt","textbox-prompt-colon","entry"];
 }
 case-indicator {
     spacing:    0;
     text-color: @normal-foreground;
 }
 entry {
-    text-color:        @normal-foreground;
-    cursor:            text;
-    spacing:           0;
-    placeholder-color: Gray;
+    text-color:        @ink;
     placeholder:       "Type to filter";
+    placeholder-color: @muted;
+    background-color: transparent;
 }
 prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @sage;
 }
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
     str:        ":";
-    text-color: inherit;
+    text-color: @muted;
+    margin:     0px 8px 0px 2px;
 }
